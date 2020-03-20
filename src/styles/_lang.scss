@@ -1,0 +1,27 @@
+@import "utils";
+
+.lang {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 3px;
+
+  &__item {
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+      }
+    }
+  }
+
+  &__link {
+    @include hover(color, $black);
+    color: $greyDark;
+    text-decoration: none;
+    outline: none;
+
+    &:focus {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+}

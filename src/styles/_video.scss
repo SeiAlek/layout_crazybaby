@@ -1,0 +1,53 @@
+@import "utils";
+
+.video {
+  padding-bottom: 170px;
+
+  &__link {
+    @include hover(background-color, rgba(0, 0, 0, 0.4));
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    height: 590px;
+    text-decoration: none;
+    background-color: transparent;
+    background-image: url(../images/illustrations/video.jpg);
+    background-size: cover;
+    background-position: center;
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      transition: background-color 0.3s;
+    }
+
+    &:hover,
+    &:focus-within {
+      &::after {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    @media screen and (max-width: $maxTabletWidth) {
+      height: 400px;
+    }
+
+    @media screen and (max-width: $maxMobileWidth) {
+      height: 246px;
+    }
+  }
+
+  &__button {
+    margin: auto;
+    z-index: 100;
+  }
+}

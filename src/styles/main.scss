@@ -1,7 +1,23 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "page";
+@import "button";
+@import "slider-nav";
 
-body {
-  background: $c-gray;
-}
+@import "header";
+@import "logo";
+@import "lang";
+@import "menu";
+@import "promo";
+@import "nav";
+@import "qualities";
+@import "video";
+@import "design";
+@import "feedback";
+@import "features";
+@import "form";
+@import "stepper";
+@import "technology";
+@import "icons";
+@import "footer";

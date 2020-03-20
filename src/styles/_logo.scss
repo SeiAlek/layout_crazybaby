@@ -1,0 +1,15 @@
+@import "utils";
+
+.logo {
+  display: block;
+  transition: transform 0.3s;
+  outline: none;
+
+  &:focus img {
+    transform: scale(1.2);
+  }
+
+  &__img {
+    @include hover(transform, scale(1.1));
+  }
+}

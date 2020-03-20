@@ -1,0 +1,50 @@
+@import "utils";
+
+.form {
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 50px;
+
+  &__label {
+    display: grid;
+
+    &:focus &__label-text {
+      visibility: visible;
+    }
+  }
+
+  &__label-text {
+    visibility: hidden;
+  }
+
+  &__field {
+    padding: 16px 0 8px;
+    color: $granit;
+    font-size: 14px;
+    line-height: 175%;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-bottom: 1px solid $grey;
+    outline: none;
+
+    &::placeholder {
+      text-transform: none;
+      color: $grey;
+    }
+
+    &:focus {
+      padding: 16px 30px 8px;
+      border: 1px solid $granit;
+    }
+  }
+
+  &__textarea {
+    height: 128px;
+    border: 1px solid $grey;
+    resize: none;
+  }
+
+  &__button {
+    margin: auto;
+  }
+}

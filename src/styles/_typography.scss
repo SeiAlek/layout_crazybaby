@@ -1,3 +1,64 @@
+html,
+body {
+  font-family: $fontAdditional;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: $background;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $fontMain;
+  font-weight: 700;
+}
+
 h1 {
-  @extend %h1;
+  font-size: 56px;
+  line-height: 129%;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    font-size: 37px;
+  }
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 34px;
+  line-height: 133%;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h5 {
+  font-family: $fontAdditional;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
 }

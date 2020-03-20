@@ -1,0 +1,73 @@
+@import "utils";
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, max-content);
+  align-items: center;
+  column-gap: 30px;
+  height: 72px;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr max-content;
+  }
+
+  &__buy-button {
+    @media screen and (max-width: $maxMobileWidth) {
+      @include hover(transform, scale(1.2));
+      position: fixed;
+      right: 30px;
+      bottom: 10vh;
+      height: 48px;
+      width: 48px;
+      box-sizing: border-box;
+      color: transparent;
+      background-color: transparent;
+      background-image: url(../images/cart.svg);
+      background-position: center;
+      background-size: cover;
+      border: 0;
+      border-radius: 50%;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        border: 0;
+        background-color: transparent;
+        transform: scale(1.5);
+        transform-origin: center;
+      }
+    }
+  }
+
+  &__menu-toggler {
+    display: none;
+    cursor: pointer;
+
+    & span {
+      display: block;
+      height: 3px;
+      width: 20px;
+      margin: 5px 0;
+      background-color: $granit;
+      border-radius: 2px;
+    }
+
+    @media screen and (max-width:$maxMobileWidth) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    @media screen and (max-width:$maxMobileWidth) {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      transform: translateY(-100px);
+      transition: transform 0.3s;
+    }
+
+    &--show {
+      transform: translateY(100px);
+    }
+  }
+}

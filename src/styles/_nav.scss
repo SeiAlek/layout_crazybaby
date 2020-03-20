@@ -1,0 +1,35 @@
+@import "utils";
+
+.nav {
+  position: sticky;
+  top: 0;
+  margin-bottom: 70px;
+  background-color: $background;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    display: none;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 30px;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+  }
+
+  &__link {
+    @include hover(color, $black);
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 150%;
+    color: $granit;
+    outline: none;
+
+    &:focus,
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}

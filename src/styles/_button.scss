@@ -1,0 +1,164 @@
+@import "utils";
+
+.button {
+  @include buttonFont;
+  @include buttonStyle;
+
+  &__primary {
+    @include hover(background-color, $black);
+    @include hover(border-color, $black);
+    height: $heightButton;
+    width: $widthBbutton;
+    color: $white;
+    background-color: $granit;
+    border-color: $granit;
+
+    &--inactive {
+      color: $white;
+      background-color: $greyLightInactive;
+      border-color: $greyLightInactive;
+      cursor: default;
+    }
+
+    &--small {
+      width: $widthButtonSmall;
+    }
+
+    &--small-inactive {
+      display: none;
+    }
+
+    &--turquoise {
+      @include hover(background-color, $green);
+      @include hover(border-color, $green);
+      color: $white;
+      background-color: $turquoise;
+      border-color: $turquoise;
+    }
+
+    &--turquoise-inactive {
+      color: $white;
+      background-color: $lagoonInactive;
+      border-color: $lagoonInactive;
+      cursor: default;
+    }
+  }
+
+  &__secondary {
+    @include hover(border-color, $granit);
+    height: $heightButton;
+    width: $widthBbutton;
+    color: $greyDark;
+    background-color: $white;
+    border-color: $white;
+
+    &--green {
+      @include hover(color, $white);
+      @include hover(background-color, $green);
+      @include hover(border-color, $green);
+      color: $turquoise;
+      background-color: $white;
+      border-color: $turquoise;
+    }
+
+    &--black {
+      @include hover(color, $white);
+      @include hover(background-color, $black);
+      @include hover(border-color, $black);
+      color: $granit;
+      background-color: $white;
+      border-color: $granit;
+    }
+  }
+
+  &__text {
+    color: $turquoise;
+
+    &--line {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 21px;
+        left: 0;
+        height: 1px;
+        width: 40%;
+        background-color: $turquoise;
+      }
+    }
+
+    &:hover &--line::after {
+      width: 100%;
+    }
+  }
+
+  &__circle {
+    height: 32px;
+    width: 32px;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background-color: $grey;
+    }
+
+    &--inactive {
+      border: 1px solid $greyDark;
+    }
+  }
+
+  &__close {
+    height: 24px;
+    width: 24px;
+    box-sizing: border-box;
+    background-image: url(../images/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      border: 1px solid $greyDark;
+    }
+  }
+
+  &__play {
+    @include hover(color, transparent);
+    height: 232px;
+    width: 232px;
+    display: block;
+    box-sizing: border-box;
+    font-family: $fontMain;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 100%;
+    color: #f3f4f5;
+    background-color: transparent;
+    border: 1px solid #f3f4f5;
+    border-radius: 50%;
+    outline: none;
+
+    @media screen and (max-width: $maxTabletWidth) {
+      height: 190px;
+      width: 190px;
+    }
+
+    @media screen and (max-width: $maxMobileWidth) {
+      height: 108px;
+      width: 108px;
+    }
+
+    &:hover,
+    &:focus {
+      color: transparent;
+      background-image: url(../images/play.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
