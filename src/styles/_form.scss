@@ -3,7 +3,11 @@
 .form {
   display: grid;
   grid-auto-flow: row;
-  row-gap: 50px;
+  gap: 50px 20px;
+
+  &--bordered {
+    gap: 20px;
+  }
 
   &__label {
     display: grid;
@@ -20,12 +24,19 @@
   &__field {
     padding: 16px 0 8px;
     color: $granit;
+    font-family: $fontAdditional;
     font-size: 14px;
     line-height: 175%;
     text-transform: uppercase;
+    background-color: transparent;
     border: 1px solid transparent;
     border-bottom: 1px solid $grey;
     outline: none;
+
+    &--bordered {
+      padding: 15px 30px 14px;
+      border: 1px solid $granit;
+    }
 
     &::placeholder {
       text-transform: none;

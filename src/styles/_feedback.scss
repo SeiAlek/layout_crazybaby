@@ -4,6 +4,10 @@
   display: flex;
   padding-bottom: 150px;
 
+  @media screen and (max-width: $maxMobileWidth) {
+    padding-bottom: 45px;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -25,6 +29,12 @@
   &__text {
     @include paragraph;
     margin-bottom: 30px;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      margin-bottom: 40px;
+      font-size: 14px;
+      line-height: 150%;
+    }
   }
 
   &__photo {
@@ -33,6 +43,10 @@
     margin: 0 auto 30px;
     border-radius: 50%;
     overflow: hidden;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      margin-bottom: 20px;
+    }
   }
 
   &__img {

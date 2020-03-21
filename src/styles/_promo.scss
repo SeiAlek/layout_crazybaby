@@ -8,7 +8,7 @@
 
   @media screen and (max-width: $maxMobileWidth) {
     grid-template-columns: 1fr;
-    padding-top: 0;
+    padding-top: 80px;
   }
 
   &__header {

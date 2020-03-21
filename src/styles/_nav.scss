@@ -7,16 +7,36 @@
   background-color: $background;
 
   @media screen and (max-width: $maxMobileWidth) {
-    display: none;
+    position: fixed;
+    right: -100px;
+    top: 130px;
+    margin: 0;
+    padding: 40px 130px 40px 80px;
+    background-color: $turquoise;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(200%, 30%) scale(2);
+    transform-origin: right;
+    transition: transform 0.3s;
+    z-index: 1000;
+
+    &--show {
+      transform: translate(0, 0) scale(1);
+    }
   }
 
   &__list {
     display: grid;
     grid-auto-flow: column;
-    column-gap: 30px;
+    gap: 10px 30px;
     justify-items: center;
     justify-content: space-evenly;
     padding: 10px 0;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      grid-auto-flow: row;
+      justify-items: end;
+    }
   }
 
   &__link {
@@ -26,6 +46,11 @@
     line-height: 150%;
     color: $granit;
     outline: none;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      font-size: 18px;
+      color: $white;
+    }
 
     &:focus,
     &:hover {

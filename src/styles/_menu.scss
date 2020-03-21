@@ -1,12 +1,15 @@
 @import "utils";
 
 .menu {
-  display: grid;
-  grid-auto-flow: column;
-  column-gap: 30px;
 
-  @media screen and (max-width:$maxMobileWidth) {
-    grid-auto-flow: row;
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px 30px;
+
+    @media screen and (max-width:$maxMobileWidth) {
+      grid-auto-flow: row;
+    }
   }
 
   &__link {
@@ -14,6 +17,11 @@
     color: $greyDark;
     text-decoration: none;
     outline: none;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      font-size: 18px;
+      color: $white;
+    }
 
     &:focus {
       color: $black;

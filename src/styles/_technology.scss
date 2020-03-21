@@ -11,7 +11,7 @@
   }
 
   &__header {
-    padding: 0 100px;
+    padding: 0 ($ident + 100px);
     text-transform: uppercase;
 
     @media screen and (max-width: $maxMobileWidth) {
@@ -23,11 +23,40 @@
     height: $technologyHeight;
     width: $technologyWidth;
     position: relative;
+    margin: auto;
+    transition: transform 0.3s;
+
+    @media screen and (max-width: $maxNotebookWidth) {
+      transform: scale(0.8) translateX(-10%);
+    }
+
+    @media screen and (max-width: $maxTabletWidth) {
+      transform: none;
+
+      &--right {
+        transform: translateX(-40%);
+      }
+    }
 
     @media screen and (max-width: $maxMobileWidth) {
-      position: absolute;
+      height: 100vw;
+      width: 200vw;
       transform: scale(0.5);
       transform-origin: left top;
+
+      &--right {
+        transform: scale(0.5) translateX(-100%);
+      }
+    }
+  }
+
+  &__fon {
+    height: 100%;
+    width: 100%;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      height: 200%;
+      width: 200%;
     }
   }
 
@@ -75,9 +104,10 @@
     cursor: default;
 
     @media screen and (max-width: $maxMobileWidth) {
+      width: 260px;
+      padding-top: 240px;
       font-size: 22px;
       line-height: 130%;
-      width: 260px;
     }
 
     &::after {
@@ -187,8 +217,11 @@
   }
 
   &__slider-nav {
-    @media screen and (max-width: $maxMobileWidth) {
-      margin-top: 400px;
+    display: none;
+    margin-top: 40px;
+
+    @media screen and (max-width: $maxTabletWidth) {
+      display: grid;
     }
   }
 }

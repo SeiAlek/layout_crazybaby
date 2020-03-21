@@ -14,7 +14,7 @@
 
   @media screen and (max-width: $maxMobileWidth) {
     grid-template-columns: 1fr;
-    padding: 0 $identMobile 100px;
+    padding: 0 $identMobile 90px;
   }
 
   &:hover {
