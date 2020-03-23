@@ -4,6 +4,7 @@
   display: grid;
   grid-auto-flow: column;
   column-gap: 46px;
+  margin-bottom: 30px;
 
   &__link {
     @include hover(transform, scale(1.2));

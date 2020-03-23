@@ -18,7 +18,7 @@
   }
 
   &__link {
-    @include hover(color, $black);
+    @include hover(color, $turquoise);
     color: $greyDark;
     text-decoration: none;
     outline: none;
@@ -29,7 +29,7 @@
     }
 
     &:focus {
-      color: $black;
+      color: $turquoise;
       text-decoration: underline;
     }
   }

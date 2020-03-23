@@ -5,13 +5,22 @@
   @include buttonStyle;
 
   &__primary {
-    @include hover(background-color, $black);
-    @include hover(border-color, $black);
     height: $heightButton;
     width: $widthBbutton;
     color: $white;
     background-color: $granit;
     border-color: $granit;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $turquoise;
+      border-color: $turquoise;
+    }
 
     &--inactive {
       color: $white;
@@ -29,11 +38,15 @@
     }
 
     &--turquoise {
-      @include hover(background-color, $green);
-      @include hover(border-color, $green);
       color: $white;
       background-color: $turquoise;
       border-color: $turquoise;
+
+      &:hover,
+      &:focus {
+        background-color: $green;
+        border-color: $green;
+      }
     }
 
     &--turquoise-inactive {
@@ -51,23 +64,43 @@
     color: $greyDark;
     background-color: $white;
     border-color: $white;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 
-    &--green {
-      @include hover(color, $white);
-      @include hover(background-color, $green);
-      @include hover(border-color, $green);
-      color: $turquoise;
-      background-color: $white;
+    @media screen and (max-width: $maxMobileWidth) {
+      width: 100%;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $turquoise;
       border-color: $turquoise;
     }
 
+    &--green {
+      color: $turquoise;
+      background-color: $white;
+      border-color: $turquoise;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $green;
+        border-color: $green;
+      }
+    }
+
     &--black {
-      @include hover(color, $white);
-      @include hover(background-color, $black);
-      @include hover(border-color, $black);
       color: $granit;
       background-color: $white;
       border-color: $granit;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        background-color: $black;
+        border-color: $black;
+      }
     }
   }
 
@@ -127,48 +160,12 @@
     }
   }
 
-  &__play {
-    @include hover(color, transparent);
-    height: 232px;
-    width: 232px;
-    display: block;
-    box-sizing: border-box;
-    font-family: $fontMain;
-    font-size: 24px;
-    text-decoration: none;
-    line-height: 100%;
-    color: #f3f4f5;
-    background-color: transparent;
-    border: 1px solid #f3f4f5;
-    border-radius: 50%;
-    outline: none;
-
-    @media screen and (max-width: $maxTabletWidth) {
-      height: 190px;
-      width: 190px;
-    }
-
-    @media screen and (max-width: $maxMobileWidth) {
-      height: 108px;
-      width: 108px;
-      font-size: 16px;
-    }
-
-    &:hover,
-    &:focus {
-      color: transparent;
-      background-image: url(../images/play.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-
   &__buy-button {
     @media screen and (max-width: $maxMobileWidth) {
       @include hover(transform, scale(1.2));
       position: fixed;
       right: 30px;
-      bottom: calc(10vw + 90px);
+      bottom: 140px;
       height: 48px;
       width: 48px;
       box-sizing: border-box;
@@ -180,6 +177,7 @@
       border: 0;
       border-radius: 50%;
       outline: none;
+      z-index: 9000;
 
       &:hover,
       &:focus {
@@ -191,35 +189,35 @@
     }
   }
 
-  &__scroll-button {
-    display: none;
+  &__scroll {
+    @include hover(transform, scale(1.1));
+    position: fixed;
+    right: 35px;
+    bottom: 100px;
+    height: 38px;
+    width: 38px;
+    background-color: $white;
+    background-image: url(../images/arrow-top.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    transform: translateY(300px);
+    transition: transform 0.3s;
+    outline: none;
+    z-index: 9000;
 
-    @media screen and (max-width: $maxMobileWidth) {
-      @include hover(transform, scale(1.1));
-      position: fixed;
-      right: 35px;
-      bottom: 10vh;
-      display: block;
-      height: 38px;
-      width: 38px;
-      background-color: $white;
-      background-image: url(../images/arrow-top.svg);
-      background-position: center;
-      background-repeat: no-repeat;
+    &:hover,
+    &:focus {
       border: 0;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      border-radius: 50%;
-      outline: none;
-      z-index: 1000;
+      background-color: $turquoise;
+      background-image: url(../images/arrow-top-white.svg);
+      transform-origin: center;
+    }
 
-      &:hover,
-      &:focus {
-        border: 0;
-        background-color: $turquoise;
-        background-image: url(../images/arrow-top-white.svg);
-        transform: scale(1.5);
-        transform-origin: center;
-      }
+    &--show {
+      transform: translateY(0);
     }
   }
 }

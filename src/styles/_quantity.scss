@@ -1,0 +1,22 @@
+@import "utils";
+
+.quantity {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 30px;
+    background-color: transparent;
+    border: 0;
+    transition: color 0.3s;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $turquoise;
+    }
+  }
+}

@@ -6,6 +6,10 @@
   gap: 30px 100px;
   padding-bottom: 140px;
 
+  @media screen and (max-width: $maxTabletWidth) {
+    gap: 30px 20px;
+  }
+
   @media screen and (max-width: $maxMobileWidth) {
     grid-template-columns: 1fr;
   }

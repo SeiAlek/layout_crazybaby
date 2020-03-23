@@ -3,7 +3,7 @@
 .video {
   padding-bottom: 170px;
 
-  &__link {
+  &__block {
     @include hover(background-color, rgba(0, 0, 0, 0.4));
     position: relative;
     top: 0;
@@ -47,7 +47,59 @@
   }
 
   &__button {
-    margin: auto;
     z-index: 100;
+  }
+
+  &__play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: transparent;
+    transition: color 0.3s;
+    outline: none;
+
+    &::after {
+      content: "Play";
+      display: block;
+      height: 230px;
+      width: 230px;
+      color: #f3f4f5;
+      font-family: $fontMain;
+      font-size: 24px;
+      text-align: center;
+      line-height: 230px;
+      border: 1px solid #f3f4f5;
+      border-radius: 50%;
+      background: transparent;
+      transition: color 0.3s;
+
+      @media screen and (max-width: $maxTabletWidth) {
+        height: 190px;
+        width: 190px;
+        line-height: 190px;
+      }
+
+      @media screen and (max-width: $maxMobileWidth) {
+        height: 100px;
+        width: 100px;
+        font-size: 16px;
+        line-height: 100px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        content: "";
+        color: transparent;
+        background-image: url(../images/play.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
   }
 }

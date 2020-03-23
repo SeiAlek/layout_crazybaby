@@ -38,7 +38,7 @@
             </ul>
           </div>
         </div>
-        <a href="#" class="
+        <a href="./cart.html" class="
           header__buy-button
           button
           button__primary
@@ -47,7 +47,7 @@
         ">
           Buy
         </a>
-        <a href="#" class="button button__scroll-button"></a>
+        <a href="#" class="button button__scroll" id="button__scroll"></a>
       </header>
 
       <section class="promo page__container">
@@ -80,17 +80,17 @@
             <a href="./#technology" class="nav__link">TECHNOLOGY</a>
           </li>
           <li class="nav__item">
-            <a href="./#featuare" class="nav__link">FEATURES</a>
+            <a href="./#features" class="nav__link">FEATURES</a>
           </li>
           <li class="nav__item">
-            <a href="./#get-in-touch" class="nav__link">GET IN TOUCH</a>
+            <a href="./#questions" class="nav__link">GET IN TOUCH</a>
           </li>
         </ul>
       </nav>
 
-      <section class="qualities page__container">
+      <section class="qualities page__container"  id="qualities__slider">
         <ul class="qualities__list">
-          <li class="qualities__item" id="qualities__item--1">
+          <li class="qualities__item qualities__item--active">
             <img src="./images/features/divider.svg" alt="Futuristic Design" class="qualities__icon">
             <h4 class="qualities__header">
               Futuristic Design
@@ -102,7 +102,7 @@
               precision cold forging technique.
             </p>
           </li>
-          <li class="qualities__item qualities__item--active" id="qualities__item--2">
+          <li class="qualities__item">
             <img src="./images/features/speaker.svg" alt="Tweeter Speaker System" class="qualities__icon">
             <h4 class="qualities__header">
               Tweeter Speaker System
@@ -113,7 +113,7 @@
               tweeter speaker responsible for high-frequency sound independently.
             </p>
           </li>
-          <li class="qualities__item" id="qualities__item--3">
+          <li class="qualities__item">
             <img src="./images/features/wifi.svg" alt="Multiroom System" class="qualities__icon">
             <h4 class="qualities__header">
               Multiroom System
@@ -124,7 +124,7 @@
               the entire house.
             </p>
           </li>
-          <li class="qualities__item" id="qualities__item--4">
+          <li class="qualities__item">
             <img src="./images/features/lighting.svg" alt="Intuitive Lighting System" class="qualities__icon">
             <h4 class="qualities__header">
               Intuitive Lighting System
@@ -135,27 +135,27 @@
             </p>
           </li>
         </ul>
-        <div class="qualities__slider-nav slider-nav" id="qualities__slider-nav">
+        <div class="qualities__slider-nav slider-nav">
           <div class="slider-nav__arrows">
-            <button class="slider-nav__arrow slider-nav__arrow--prev" id="qualities-slider--prev"></button>
-            <button class="slider-nav__arrow slider-nav__arrow--next" id="qualities-slider--next"></button>
+            <button class="slider-nav__arrow slider-nav__arrow--prev"></button>
+            <button class="slider-nav__arrow slider-nav__arrow--next"></button>
           </div>
           <ul class="slider-nav__point-list">
-            <li class="slider-nav__point" id="qualities-slider__point--1">1</li>
-            <li class="slider-nav__point slider-nav__point--active" id="qualities-slider__point--2">2</li>
-            <li class="slider-nav__point" id="qualities-slider__point--3">3</li>
-            <li class="slider-nav__point" id="qualities-slider__point--4">4</li>
+            <li class="slider-nav__point">1</li>
+            <li class="slider-nav__point slider-nav__point--active">2</li>
+            <li class="slider-nav__point">3</li>
+            <li class="slider-nav__point">4</li>
           </ul>
         </div>
       </section>
 
-      <section class="video page__container--wide" id="video">
-        <a href="./#video" class="video__link" tabindex="-1">
-          <button href="./#video" class="video__button button button__play">Play</button>
-        </a>
+      <section class="video page__container--wide" id="our-story">
+        <div class="video__block">
+          <a href="./#video" class="video__button video__play"></a>
+        </div>
       </section>
 
-      <section class="design page__container page__container--tight">
+      <section class="design page__container page__container--tight" id="about-us">
         <h1 class="design__header">
           DESIGNED FOR THE FUTURE
         </h1>
@@ -179,7 +179,7 @@
         </div>
       </section>
 
-      <section class="technology page__container page__container--wide">
+      <section class="technology page__container page__container--wide" id="technology">
         <h1 class="technology__header">
           technology
         </h1>
@@ -305,7 +305,7 @@
         </div>
       </section>
 
-      <section class="features page__container">
+      <section class="features page__container" id="features">
         <div class="features__content">
           <h1 class="features__header">
             FEATURES
@@ -362,11 +362,11 @@
         </div>
       </section>
 
-      <section class="questions page__container page__container--tight">
+      <section class="questions page__container page__container--tight" id="questions">
         <h1 class="questions__header">
           DO YOU HAVE ANY QUESTIONS?
         </h1>
-        <form action="#" method="POST" class="questions__form form form--bordered">
+        <form action="#" method="GET" class="questions__form form form--bordered">
           <input
             name="email"
             id="questions__form--email"

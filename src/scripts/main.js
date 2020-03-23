@@ -26,3 +26,13 @@ navSliderTech.addEventListener('click', (e) => {
     techBlock.classList.add('technology__container--right');
   }
 });
+
+const btnScroll = document.getElementById('button__scroll');
+
+window.addEventListener('scroll', () => {
+  if (pageYOffset > 300) {
+    btnScroll.classList.add('button__scroll--show');
+  } else {
+    btnScroll.classList.remove('button__scroll--show');
+  }
+});

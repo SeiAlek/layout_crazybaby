@@ -1,10 +1,7 @@
 @import "utils";
 
 .nav {
-  position: sticky;
-  top: 0;
   margin-bottom: 70px;
-  background-color: $background;
 
   @media screen and (max-width: $maxMobileWidth) {
     position: fixed;
