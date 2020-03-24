@@ -39,7 +39,8 @@
 
   &__photo {
     display: inline-block;
-    width: fit-content;
+    height: 200px;
+    width: 200px;
     margin: 0 auto 30px;
     border-radius: 50%;
     overflow: hidden;
@@ -50,6 +51,10 @@
   }
 
   &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: transform 0.3s;
   }
 
