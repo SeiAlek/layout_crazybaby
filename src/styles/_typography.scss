@@ -1,3 +1,73 @@
+html,
+body {
+  font-family: $fontAdditional;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: $background;
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+input,
+textarea,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $fontMain;
+  font-weight: 700;
+  line-height: 150%;
+}
+
 h1 {
-  @extend %h1;
+  font-size: 56px;
+  line-height: 129%;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    font-size: 37px;
+  }
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 133%;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    font-size: 30px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+h5 {
+  font-family: $fontAdditional;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+li {
+  list-style: none;
 }

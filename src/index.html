@@ -3,11 +3,422 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>CrazyBaby</title>
+    <link rel="shortcut icon" href="./images/favicon64.svg" type="image/svg">
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/svg">
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+  <body class="page">
+    <div class="page__wrapper">
+      <header class="header page__container" id="header">
+        <a href="/" class="header__logo logo">
+          <img src="./images/logo.svg" alt="CrazyBaby" class="logo__img">
+        </a>
+        <div id="header__menu-toggler" class="header__menu-toggler menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div id="header__menu" class="header__menu menu">
+          <div class="menu__list">
+            <a href="#" class="menu__link">
+              SPECS
+            </a>
+            <ul class="menu__lang lang">
+              <li class="lang__item">
+                <a href="#" class="lang__link">
+                  EN
+                </a>
+              </li>
+              <li class="lang__item">
+                <a href="#" class="lang__link">
+                  UA
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="./cart.html" class="
+          header__buy-button
+          button
+          button__primary
+          button__primary--small
+          button__buy-button
+        ">
+          Buy
+        </a>
+        <a href="#" class="button button__scroll" id="button__scroll"></a>
+      </header>
+
+      <section class="promo page__container">
+        <h1 class="promo__header">
+          Futuristic Wireless Speaker
+        </h1>
+        <div class="promo__text">
+          Luna’s performance is balanced and smooth in all frequency ranges
+          which makes the music both naturally pleasant and distinctly more
+          layered.
+        </div>
+        <div class="promo__photo">
+          <img
+          src="./images/products/Futuristic-Wireless-Speaker.jpg"
+          alt="Futuristic Wireless Speaker"
+          class="promo__img"
+        >
+        </div>
+      </section>
+
+      <nav class="nav page__container" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="./#our-story" class="nav__link">OUR STORY</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#about-us" class="nav__link">ABOUT US</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#technology" class="nav__link">TECHNOLOGY</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#features" class="nav__link">FEATURES</a>
+          </li>
+          <li class="nav__item">
+            <a href="./#questions" class="nav__link">GET IN TOUCH</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="qualities page__container"  id="qualities__slider">
+        <ul class="qualities__list">
+          <li class="qualities__item qualities__item--active">
+            <img src="./images/features/divider.svg" alt="Futuristic Design" class="qualities__icon">
+            <h4 class="qualities__header">
+              Futuristic Design
+            </h4>
+            <p class="qualities__text">
+              To give Luna a truly flawless look, we specifically picked
+              aircraft grade aluminum as its material and adopted both
+              three-dimensional stretch-bending technology and a high
+              precision cold forging technique.
+            </p>
+          </li>
+          <li class="qualities__item">
+            <img src="./images/features/speaker.svg" alt="Tweeter Speaker System" class="qualities__icon">
+            <h4 class="qualities__header">
+              Tweeter Speaker System
+            </h4>
+            <p class="qualities__text">
+              To deliver a more layered sound performance better than a
+              sole full-range speaker, our team equipped Luna with one more
+              tweeter speaker responsible for high-frequency sound independently.
+            </p>
+          </li>
+          <li class="qualities__item">
+            <img src="./images/features/wifi.svg" alt="Multiroom System" class="qualities__icon">
+            <h4 class="qualities__header">
+              Multiroom System
+            </h4>
+            <p class="qualities__text">
+              Luna is natively compatible with your home Wi-Fi. Set up multiple
+              speakers in different rooms to expand your music experience into
+              the entire house.
+            </p>
+          </li>
+          <li class="qualities__item">
+            <img src="./images/features/lighting.svg" alt="Intuitive Lighting System" class="qualities__icon">
+            <h4 class="qualities__header">
+              Intuitive Lighting System
+            </h4>
+            <p class="feature__text">
+              An intuitive user interface allows you to adjust the hue and
+              saturation of color for lighting that fits any mood and situation.
+            </p>
+          </li>
+        </ul>
+        <div class="qualities__slider-nav slider-nav">
+          <div class="slider-nav__arrows">
+            <button class="slider-nav__arrow slider-nav__arrow--prev"></button>
+            <button class="slider-nav__arrow slider-nav__arrow--next"></button>
+          </div>
+          <ul class="slider-nav__point-list">
+            <li class="slider-nav__point">1</li>
+            <li class="slider-nav__point slider-nav__point--active">2</li>
+            <li class="slider-nav__point">3</li>
+            <li class="slider-nav__point">4</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="video page__container--wide" id="our-story">
+        <div class="video__block">
+          <a href="./#video" class="video__button video__play"></a>
+        </div>
+      </section>
+
+      <section class="design page__container page__container--tight" id="about-us">
+        <h1 class="design__header">
+          DESIGNED FOR THE FUTURE
+        </h1>
+        <div class="design__img-wrapper">
+          <img
+            src="./images/illustrations/speaker-draw.jpg"
+            alt="DESIGNED FOR THE FUTURE"
+            class="design__img"
+          >
+        </div>
+        <div class="design__text">
+          <p>
+            In 2014, a group of geeky industrial designers, engineering
+            veterans and acoustic experts formed crazybaby. This is a bunch
+            of passionate people who are crazy enough to think they can
+            challenge the industry with disruptive audio products.
+          </p>
+          <a href="#" class="design__more-link">
+            See more about us
+          </a>
+        </div>
+      </section>
+
+      <section class="technology page__container page__container--wide" id="technology">
+        <h1 class="technology__header">
+          technology
+        </h1>
+        <div class="technology__container" id="technology__container">
+          <img src="./images/illustrations/technology.png" alt="Technology" class="technology__fon">
+
+          <div class="technology__item technology__item--num1">
+            <input id="technology__item--num1" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num1" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--long">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num2">
+            <input id="technology__item--num2" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num2" class="technology__plus"></label>
+            <div class="technology__descr">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num3">
+            <input id="technology__item--num3" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num3" class="technology__plus"></label>
+            <div class="technology__descr">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num4">
+            <input id="technology__item--num4" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num4" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--long">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num5">
+            <input id="technology__item--num5" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num5" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--short  technology__descr--right">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num6">
+            <input id="technology__item--num6" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num6" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--long  technology__descr--right">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num7">
+            <input id="technology__item--num7" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num7" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--short">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num8">
+            <input id="technology__item--num8" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num8" class="technology__plus"></label>
+            <div class="technology__descr">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num9">
+            <input id="technology__item--num9" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num9" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--right technology__descr--long">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num10">
+            <input id="technology__item--num10" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num10" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--right">
+              Control button ring ornament
+            </div>
+          </div>
+
+          <div class="technology__item technology__item--num11">
+            <input id="technology__item--num11" name="technology" type="radio" class="technology__radio">
+            <label for="technology__item--num11" class="technology__plus"></label>
+            <div class="technology__descr technology__descr--right">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, quasi?
+            </div>
+          </div>
+        </div>
+        <div class="technology__slider-nav slider-nav"  id="technology__slider-nav">
+          <div class="slider-nav__arrows">
+            <button class="slider-nav__arrow slider-nav__arrow--prev" id="technology-slider--prev"></button>
+            <button class="slider-nav__arrow slider-nav__arrow--next" id="technology-slider--next"></button>
+          </div>
+          <ul class="slider-nav__point-list">
+            <li class="slider-nav__point slider-nav__point--active" id="technology-slider__point--1">1</li>
+            <li class="slider-nav__point" id="technology-slider__point--2">2</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="feedback page__container">
+        <div class="feedback__item">
+          <p class="feedback__text">
+            It really took me by surprise honestly to have such full beautiful sound that coming
+            out of this small compact device. And with the brush aluminum surface, it feels so
+            familiar. Like my iPhone.
+          </p>
+          <div class="feedback__photo">
+            <img src="./images/people/testimonial-ava-3.jpg" alt="Michel Grover" class="feedback__img">
+          </div>
+          <a href="#" class="feedback__author">
+            Michel Grover
+          </a>
+          <div class="feedback__author-position">
+            Creative Director
+          </div>
+        </div>
+      </section>
+
+      <section class="features page__container" id="features">
+        <div class="features__content">
+          <h1 class="features__header">
+            FEATURES
+          </h1>
+          <ul class="features__block-list">
+            <li class="features__block">
+              <h3 class="features__block-header">
+                Sound & Music
+              </h3>
+              <ul class="features__list">
+                <li class="features__item">Feel-in-chest Base Power</li>
+                <li class="features__item">Lossless Digital Audio Transmission</li>
+                <li class="features__item">Easy & Stable Stereo Pairing</li>
+                <li class="features__item">Crisp and Clear High Frequency Sound</li>
+                <li class="features__item">Streams from Cloud Music and Local Library</li>
+                <li class="features__item">Auto Music Playback from Last Song Stopped</li>
+              </ul>
+            </li>
+            <li class="features__block">
+              <h3 class="features__block-header">
+                Connectivity
+              </h3>
+              <ul class="features__list">
+                <li class="features__item">Hands Free Wireless Audio</li>
+                <li class="features__item">Bluetooth 4.0 LE</li>
+                <li class="features__item">Wi-Fi 2.4 GHz (802.11 b/g/n)</li>
+                <li class="features__item">Smart Multiroom System Set Up</li>
+                <li class="features__item">Party Mode with 6.0 Units and above</li>
+                <li class="features__item">Powerful MESHNET Multi Speaker Network</li>
+              </ul>
+            </li>
+            <li class="features__block">
+              <h3 class="features__block-header">
+                App Features
+              </h3>
+              <ul class="features__list">
+                <li class="features__item">Customize Music Schedule</li>
+                <li class="features__item">Wake Up with Favorite Songs</li>
+                <li class="features__item">Home Detection Auto Wake Up</li>
+                <li class="features__item">Color Wheel & Saturation Change</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="features__slider-nav slider-nav"  id="features__slider-nav">
+            <div class="slider-nav__arrows">
+              <button class="slider-nav__arrow slider-nav__arrow--prev" id="features-slider--prev"></button>
+              <button class="slider-nav__arrow slider-nav__arrow--next" id="features-slider--next"></button>
+            </div>
+            <ul class="slider-nav__point-list">
+              <li class="slider-nav__point slider-nav__point--active" id="features-slider__point--1">1</li>
+              <li class="slider-nav__point" id="features-slider__point--2">3</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions page__container page__container--tight" id="questions">
+        <h1 class="questions__header">
+          DO YOU HAVE ANY QUESTIONS?
+        </h1>
+        <form action="#" method="GET" class="questions__form form form--bordered">
+          <input
+            name="email"
+            id="questions__form--email"
+            type="email"
+            required
+            class="form__field form__field--bordered"
+            placeholder="Your email"
+          >
+          <textarea
+            name="message"
+            id="questions__form--message"
+            required
+            class="form__field form__field--bordered form__textarea"
+            placeholder="Your message..."
+          ></textarea>
+          <button
+            type="submit"
+            class="
+              form__button
+              button
+              button__primary
+              button__primary--small
+              button__primary--turquoise"
+          >SEND</button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__section">
+          <a href="index.html" class="footer__logo logo">
+            <img src="./images/logo.svg" alt="CrazyBaby" class="logo__img">
+          </a>
+        </div>
+        <ul class="footer__section footer__icons icons">
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__facebook"></a>
+          </li>
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__twitter"></a>
+          </li>
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__instagram"></a>
+          </li>
+        </ul>
+        <p class="footer__section">
+          © 2019 All rights reserved.
+          <a href="./#" class="footer__link">Terms of Use</a>
+          &
+          <a href="./#" class="footer__link">Privacy Policy</a>
+        </p>
+      </footer>
+    </div>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

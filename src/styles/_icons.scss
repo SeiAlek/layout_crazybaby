@@ -1,0 +1,48 @@
+@import "utils";
+
+.icons {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 46px;
+  margin-bottom: 30px;
+
+  &__link {
+    @include hover(transform, scale(1.2));
+    display: block;
+    height: $socialIconSize;
+    width: $socialIconSize;
+    box-sizing: content-box;
+    padding: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    outline: none;
+  }
+
+  &__facebook {
+    background-image: url(../images/social/facebook.svg);
+
+    &:hover,
+    &:focus {
+      background-image: url(../images/social/facebook-color.svg);
+    }
+  }
+
+  &__twitter {
+    background-image: url(../images/social/twitter.svg);
+
+    &:hover,
+    &:focus {
+      background-image: url(../images/social/twitter-color.svg);
+    }
+  }
+
+  &__instagram {
+    background-image: url(../images/social/instagram.svg);
+
+    &:hover,
+    &:focus {
+      background-image: url(../images/social/instagram-color.svg);
+    }
+  }
+}

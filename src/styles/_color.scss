@@ -1,0 +1,79 @@
+@import "utils";
+
+.color {
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+    justify-items: center;
+  }
+
+  &__block {
+    display: block;
+    padding: 3px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    outline: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      height: ($collorBlockSize - 3px);
+      width: ($collorBlockSize - 3px);
+      border-radius: 50%;
+    }
+
+    &--silver::after {
+      background-color: #d4d4d4;
+    }
+
+    &--grey::after {
+      background-color: #a4a4a4;
+    }
+
+    &--gold::after {
+      background-color: #a1847d;
+    }
+
+    &--beige::after {
+      background-color: #b4a492;
+    }
+
+    &--dark-grey::after {
+      background-color: #828387;
+    }
+  }
+
+  &__radio {
+    @include visibilityHidden;
+
+    &:checked + .color__block {
+      border-color: $granit;
+    }
+
+    &:disabled + .color__block {
+      opacity: 0.5;
+
+      &::after {
+        content: "x";
+        text-align: center;
+        line-height: ($collorBlockSize - 3px);
+        color: $white;
+      }
+    }
+
+    &:focus + .color__block {
+      transform: scale(1.2);
+    }
+  }
+
+  &__name {
+    @include text3;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

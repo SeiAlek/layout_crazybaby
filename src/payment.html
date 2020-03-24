@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrazyBaby</title>
+    <link rel="shortcut icon" href="./images/favicon64.svg" type="image/svg">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/svg">
+  </head>
+  <body class="page">
+    <div class="page__wrapper">
+      <header class="header page__container" id="header">
+        <a href="/" class="header__logo logo">
+          <img src="./images/logo.svg" alt="CrazyBaby" class="logo__img">
+        </a>
+        <a href="#" class="button button__scroll" id="button__scroll"></a>
+      </header>
+
+      <section class="cart page__container">
+        <div class="cart__stepper stepper">
+          <a href="./shipping.html" class="stepper__back"></a>
+          <div class="stepper__block">
+            <ul class="stepper__list-point">
+              <li class="stepper__item-point">
+                <div class="stepper__point stepper__point--done"></div>
+              </li>
+              <li class="stepper__line"></li>
+              <li class="stepper__item-point">
+                <div class="stepper__point stepper__point--done"></div>
+              </li>
+              <li class="stepper__line"></li>
+              <li class="stepper__item-point">
+                <div class="stepper__point stepper__point--active"></div>
+              </li>
+            </ul>
+            <ul class="stepper__list-descr">
+              <li class="stepper__descr">
+                CART
+              </li>
+              <li class="stepper__descr">
+                SHIPPING
+              </li>
+              <li class="stepper__descr">
+                PAYMENT
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cart__payment">
+          <div class="cart__payment-systems-list">
+            <img src="./images/payment/mastercard.svg" alt="MasterCard" class="cart__payment-system">
+            <img src="./images/payment/visa.svg" alt="Visa" class="cart__payment-system">
+            <img src="./images/payment/apple-pay.svg" alt="Apple Pay" class="cart__payment-system">
+            <img src="./images/payment/american-express.svg" alt="American Express" class="cart__payment-system">
+          </div>
+
+          <form action="./thanks.html" method="GET" id="product-shipping-form" class="form">
+            <label for="ccname" class="form__label">
+              <span class="form__label-text">Card Holder</span>
+              <input
+                type="text"
+                name="ccname"
+                id="ccname"
+                class="form__field"
+                required
+                placeholder="Card Holder"
+                pattern="[A-Za-z]{2,} [A-Za-z]{2,}"
+                maxlength="60"
+                autocomplete="cc-name"
+              >
+            </label>
+            <label for="cardnumber" class="form__label">
+              <span class="form__label-text">Card Number (Format: 0000 0000 0000 0000)</span>
+              <input
+                type="text"
+                name="cardnumber"
+                id="cardnumber"
+                class="form__field"
+                required
+                placeholder="0000 0000 0000 0000"
+                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+                autocomplete="cc-number"
+              >
+            </label>
+            <div class="form__field-block form__field-block--row">
+              <label for="ccmonth" class="form__label form__label--tight">
+                <input
+                  type="number"
+                  name="ccmonth"
+                  id="ccmonth"
+                  class="form__field form__field-number form__field--tight form__field--two"
+                  required
+                  placeholder="MM"
+                  min="01"
+                  max="12"
+                  autocomplete="cc-exp-month"
+                >
+              </label>
+              <div class="form__divider">/</div>
+              <label for="ccyear" class="form__label form__label--tight">
+                <span class="form__label-text"></span>
+                <input
+                  type="number"
+                  id="ccyear"
+                  class="form__field form__field-number form__field--tight form__field--two"
+                  required
+                  placeholder="YY"
+                  min="20"
+                  autocomplete="cc-exp-year"
+                >
+              </label>
+              <label for="cvc" class="form__label form__label--tight">
+                <span class="form__label-text">CVC</span>
+                <input
+                  type="password"
+                  id="cvc"
+                  class="form__field form__field--tight form__field--cvc"
+                  required
+                  placeholder="***"
+                  pattern="[0-9]{3}"
+                  autocomplete="cc-csc"
+                >
+              </label>
+            </div>
+            <div class="form__buttons">
+              <a href="./shipping.html" class="form__button--left button button__secondary">return to shippingt</a>
+              <button type="submit" class="form__button--right button button__primary">CONTINUE</button>
+            </div>
+          </form>
+        </div>
+
+
+      </section>
+
+      <footer class="footer">
+        <div class="footer__section">
+          <a href="index.html" class="footer__logo logo">
+            <img src="./images/logo.svg" alt="CrazyBaby" class="logo__img">
+          </a>
+        </div>
+        <ul class="footer__section footer__icons icons">
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__facebook"></a>
+          </li>
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__twitter"></a>
+          </li>
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__instagram"></a>
+          </li>
+        </ul>
+        <p class="footer__section">
+          © 2019 All rights reserved.
+          <a href="./#" class="footer__link">Terms of Use</a>
+          &
+          <a href="./#" class="footer__link">Privacy Policy</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

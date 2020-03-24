@@ -1,0 +1,65 @@
+@import "utils";
+
+.slider-nav {
+  display: grid;
+  grid-template-rows: 13px 20px;
+  gap: 8px 0;
+  justify-items: center;
+
+  &__arrows {
+    display: flex;
+  }
+
+  &__arrow {
+    height: 13px;
+    width: 48px;
+    margin: 0 -4px;
+    background-color: $greyLight;
+    border: none;
+    mask-position: center;
+    mask-size: cover;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $granit;
+    }
+
+    &--prev {
+      mask-image: url(../images/slider/arrow-prev.svg);
+    }
+
+    &--next {
+      mask-image: url(../images/slider/arrow-next.svg);
+    }
+  }
+
+  &__point-list {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__point {
+    display: none;
+    font-family: $fontMain;
+
+    &--active {
+      display: inline;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &:last-child {
+      display: inline;
+      font-size: 11px;
+      line-height: 14px;
+      color: $greyLight;
+
+      &::before {
+        content: "/";
+        padding: 0 4px;
+      }
+    }
+  }
+}

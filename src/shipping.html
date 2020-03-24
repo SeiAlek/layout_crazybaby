@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrazyBaby</title>
+    <link rel="shortcut icon" href="./images/favicon64.svg" type="image/svg">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/svg">
+  </head>
+  <body class="page">
+    <div class="page__wrapper">
+      <header class="header page__container" id="header">
+        <a href="/" class="header__logo logo">
+          <img src="./images/logo.svg" alt="CrazyBaby" class="logo__img">
+        </a>
+        <a href="#" class="button button__scroll" id="button__scroll"></a>
+      </header>
+
+      <section class="cart page__container">
+        <div class="cart__stepper stepper">
+          <a href="./cart.html" class="stepper__back"></a>
+          <div class="stepper__block">
+            <ul class="stepper__list-point">
+              <li class="stepper__item-point">
+                <div class="stepper__point stepper__point--done"></div>
+              </li>
+              <li class="stepper__line"></li>
+              <li class="stepper__item-point">
+                <div class="stepper__point stepper__point--active"></div>
+              </li>
+              <li></li>
+              <li class="stepper__item-point">
+                <div class="stepper__point"></div>
+              </li>
+            </ul>
+            <ul class="stepper__list-descr">
+              <li class="stepper__descr">
+                CART
+              </li>
+              <li class="stepper__descr">
+                SHIPPING
+              </li>
+              <li class="stepper__descr">
+                PAYMENT
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cart__shipping">
+          <form action="./payment.html" method="GET" id="product-shipping-form" class="form">
+            <label for="name" class="form__label">
+              <span class="form__label-text">First and Last Name</span>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form__field"
+                required
+                placeholder="First and Last Name"
+                pattern="[A-Za-z ]{2,}"
+                maxlength="60"
+                autocomplete="name"
+              >
+            </label>
+            <label for="email" class="form__label">
+              <span class="form__label-text">Email</span>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form__field"
+                required
+                placeholder="Email"
+                maxlength="60"
+                autocomplete="email"
+              >
+            </label>
+            <label for="phone" class="form__label">
+              <span class="form__label-text">Phone Number (Format: 123-456-7890)</span>
+              <input
+              type="tel"
+              name="phone"
+              id="phone"
+              class="form__field"
+              required
+              placeholder="Phone Number (Format: 123-456-7890)"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              autocomplete="tel"
+              >
+            </label>
+            <label for="country" class="form__label">
+              <span class="form__label-text">Country</span>
+              <input
+                type="text"
+                name="country"
+                id="country"
+                class="form__field"
+                required
+                placeholder="Country"
+                pattern="[A-Za-z]{3,}"
+                maxlength="20"
+                autocomplete="country"
+              >
+            </label>
+            <label for="city" class="form__label">
+              <span class="form__label-text">City</span>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                class="form__field"
+                required
+                placeholder="City"
+                pattern="[A-Za-z]{2,}"
+                maxlength="20"
+                autocomplete="address-level2"
+              >
+            </label>
+            <label for="address" class="form__label">
+              <span class="form__label-text">Country</span>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                class="form__field"
+                required
+                placeholder="Address"
+                maxlength="60"
+                autocomplete="street-address"
+              >
+            </label>
+            <div class="form__buttons">
+              <a href="./cart.html" class="form__button--left button button__secondary">return to cart</a>
+              <button type="submit" class="form__button--right button button__primary">CONTINUE</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__section">
+          <a href="index.html" class="footer__logo logo">
+            <img src="./images/logo.svg" alt="CrazyBaby" class="logo__img">
+          </a>
+        </div>
+        <ul class="footer__section footer__icons icons">
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__facebook"></a>
+          </li>
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__twitter"></a>
+          </li>
+          <li class="icons__item">
+            <a href="./#" class="icons__link icons__instagram"></a>
+          </li>
+        </ul>
+        <p class="footer__section">
+          © 2019 All rights reserved.
+          <a href="./#" class="footer__link">Terms of Use</a>
+          &
+          <a href="./#" class="footer__link">Privacy Policy</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

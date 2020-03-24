@@ -1,0 +1,56 @@
+@import "utils";
+
+.nav {
+  margin-bottom: 70px;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    position: fixed;
+    right: -100px;
+    top: 130px;
+    margin: 0;
+    padding: 40px 130px 40px 80px;
+    background-color: $turquoise;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(200%, 30%) scale(2);
+    transform-origin: right;
+    transition: transform 0.3s;
+    z-index: 1000;
+
+    &--show {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px 30px;
+    justify-items: center;
+    justify-content: space-evenly;
+    padding: 10px 0;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      grid-auto-flow: row;
+      justify-items: end;
+    }
+  }
+
+  &__link {
+    @include moreLink(0);
+    font-family: $fontMain;
+    font-weight: 700;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      padding-top: 10px;
+      font-size: 18px;
+      font-weight: 400;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        color: $green;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "utils";
+
+.page {
+  position: relative;
+
+  &__container {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    padding: 0 $ident;
+    box-sizing: border-box;
+
+    @media screen and (max-width: $maxTabletWidth) {
+      padding: 0 $identTablet;
+    }
+
+    @media screen and (max-width: $maxMobileWidth) {
+      padding: 0 $identMobile;
+    }
+
+    &--wide {
+      padding: 0;
+    }
+
+    &--tight {
+      padding: 0 ($ident + 100px);
+
+      @media screen and (max-width: $maxNotebookWidth) {
+        padding: 0 $ident;
+      }
+
+      @media screen and (max-width: $maxTabletWidth) {
+        padding: 0 $identTablet;
+      }
+
+      @media screen and (max-width: $maxMobileWidth) {
+        padding: 0 $identMobile;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      width: 100vw;
+    }
+  }
+}

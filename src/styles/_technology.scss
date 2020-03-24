@@ -1,0 +1,227 @@
+@import "utils";
+
+.technology {
+  @include text2;
+  position: relative;
+  padding-bottom: 130px;
+  overflow: hidden;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    padding: 0 0 90px;
+  }
+
+  &__header {
+    padding: 0 ($ident + 100px);
+    text-transform: uppercase;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      padding: 0 $identMobile;
+    }
+  }
+
+  &__container {
+    height: $technologyHeight;
+    width: $technologyWidth;
+    position: relative;
+    margin: auto;
+    transition: transform 0.3s;
+
+    @media screen and (max-width: $maxNotebookWidth) {
+      transform: scale(0.8) translateX(-10%);
+    }
+
+    @media screen and (max-width: $maxTabletWidth) {
+      transform: none;
+
+      &--right {
+        transform: translateX(-40%);
+      }
+    }
+
+    @media screen and (max-width: $maxMobileWidth) {
+      height: 100vw;
+      width: 200vw;
+      transform: scale(0.5);
+      transform-origin: left top;
+
+      &--right {
+        transform: scale(0.5) translateX(-100%);
+      }
+    }
+  }
+
+  &__fon {
+    height: 100%;
+    width: 100%;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      height: 200%;
+      width: 200%;
+    }
+  }
+
+  &__item {
+    position: absolute;
+    height: $heightButton;
+    width: $heightButton;
+    cursor: pointer;
+  }
+
+  &__plus {
+    @include buttonFont;
+    @include buttonStyle;
+    position: relative;
+    height: $heightButton;
+    width: $heightButton;
+    color: $white;
+    background-image: url(../images/plus.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $turquoise;
+    border: 0;
+    border-radius: 50%;
+    z-index: 100;
+    transition: background-color 0.3s;
+  }
+
+  &__descr {
+    position: absolute;
+    display: none;
+    top: ($heightButton + 25px);
+    left: ($heightButton / 2);
+    width: 175px;
+    box-sizing: border-box;
+    padding-top: 150px;
+    padding-right: 0;
+    padding-left: 20px;
+    padding-bottom: 13px;
+    border-right: 1px solid transparent;
+    border-left: 1px solid $granit;
+    border-bottom: 1px solid $granit;
+    z-index: 80;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: default;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      width: 260px;
+      padding-top: 240px;
+      font-size: 22px;
+      line-height: 130%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      right: 0;
+      height: 5px;
+      width: 63px;
+      background-color: $granit;
+    }
+
+    &--short {
+      padding-top: 50px;
+    }
+
+    &--long {
+      padding-top: 280px;
+    }
+
+    &--right {
+      right: ($heightButton / 2);
+      left: auto;
+      padding-right: 20px;
+      padding-left: 0;
+      border-left: transparent;
+      border-right: 1px solid $granit;
+
+      &::after {
+        content: "";
+        left: 0;
+        right: auto;
+
+      }
+    }
+  }
+
+  &__radio {
+    @include visibilityHidden;
+
+    &:checked + .technology__plus {
+      background-color: $black;
+    }
+
+    &:checked ~ .technology__descr {
+      display: grid;
+      align-items: end;
+      align-content: end;
+      opacity: 1;
+    }
+  }
+
+  &__item--num1 {
+    top: 227px;
+    left: 98px;
+  }
+
+  &__item--num2 {
+    top: 265px;
+    left: 280px;
+  }
+
+  &__item--num3 {
+    top: 303px;
+    left: 352px;
+  }
+
+  &__item--num4 {
+    top: 143px;
+    left: 412px;
+  }
+
+  &__item--num5 {
+    top: 426px;
+    left: 514px;
+  }
+
+  &__item--num6 {
+    top: 179px;
+    left: 651px;
+  }
+
+  &__item--num7 {
+    top: 327px;
+    left: 789px;
+  }
+
+  &__item--num8 {
+    top: 184px;
+    left: 936px;
+  }
+
+  &__item--num9 {
+    top: 87px;
+    left: 1068px;
+  }
+
+  &__item--num10 {
+    top: 221px;
+    left: 1132px;
+  }
+
+  &__item--num11 {
+    top: 160px;
+    left: 1180px;
+  }
+
+  &__slider-nav {
+    display: none;
+    margin-top: 40px;
+
+    @media screen and (max-width: $maxTabletWidth) {
+      display: grid;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "utils";
+
+.qualities {
+  padding-bottom: 170px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 30px;
+
+    @media screen and (max-width: $maxTabletWidth) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 70px;
+    }
+
+    @media screen and (max-width: $maxMobileWidth) {
+      grid-template-columns: repeat(4, 100vw);
+      gap: 0 30px;
+      margin: 0 (-$identMobile);
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-rows: 90px 60px 1fr;
+    row-gap: 20px;
+    justify-items: center;
+    text-align: center;
+
+    &:hover {
+      img {
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  &__icon {
+    margin: auto;
+    transition: transform 0.3s;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    color: $grey;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      padding: $identMobile;
+    }
+  }
+
+  &__slider-nav {
+    display: none;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+  }
+}

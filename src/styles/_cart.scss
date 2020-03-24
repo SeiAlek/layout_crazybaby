@@ -1,0 +1,41 @@
+@import "utils";
+
+.cart {
+  padding-bottom: 150px;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  &__shipping {
+    max-width: 380px;
+    margin: 90px auto;
+  }
+
+  &__payment {
+    max-width: 580px;
+    margin: 90px auto;
+    padding: 50px 100px 0;
+    box-sizing: border-box;
+    background-color: $white;
+    border: 1px solid $greenLight;
+    border-radius: 10px;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      margin: 0;
+      padding: 70px 0;
+      background-color: transparent;
+    }
+  }
+
+  &__payment-systems-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+
+  &__payment-system {
+    margin: 0 9px;
+  }
+}

@@ -1,0 +1,118 @@
+@import "utils";
+
+.stepper {
+  display: grid;
+  grid-template-rows: $stepperPointSize 1fr;
+  row-gap: 16px;
+  @include text1;
+
+  &__back {
+    @include hover(background-color, $turquoise);
+    display: block;
+    height: $stepperPointSize;
+    width: $stepperPointSize;
+    background-color: $grey;
+    mask-image: url(../images/arrow-left.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    &:hover,
+    &:focus {
+      background-color: $turquoise;
+    }
+  }
+
+  &__block {
+    display: grid;
+    gap: 16px 0;
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+  }
+
+  &__list-point {
+    display: grid;
+    grid-template-columns: repeat(2, $stepperPointSize 1fr) $stepperPointSize;
+    justify-items: stretch;
+    margin: 0 $stepperListMargin;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      margin: 0;
+    }
+  }
+
+  &__line {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      top: ($stepperPointSize / 2);
+      height: 1px;
+      width: 100%;
+      background-color: $greyDark;
+    }
+  }
+
+  &__point {
+    justify-self: end;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: $stepperPointSize;
+    width: $stepperPointSize;
+    border-radius: 50%;
+
+    &::after {
+      @include point;
+      background-color: $greyLight;
+    }
+
+    &--active {
+      border: 1px solid $greyDark;
+
+      &::after {
+        @include point;
+        background-color: $greyDark;
+      }
+    }
+
+    &--done {
+      &::after {
+        @include point;
+        background-color: $greyDark;
+      }
+    }
+  }
+
+  &__list-descr {
+    display: grid;
+    grid-template-columns: (($stepperListMargin * 2) + $stepperPointSize)
+      1fr
+      (($stepperListMargin * 2) + $stepperPointSize);
+    justify-items: center;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: space-between;
+    }
+  }
+
+  &__descr {
+    @media screen and (max-width: $maxMobileWidth) {
+      justify-self: center;
+      font-size: 11px;
+      line-height: 13px;
+
+      &:first-child {
+        justify-self: start;
+      }
+
+      &:last-child {
+        justify-self: end;
+      }
+    }
+  }
+}

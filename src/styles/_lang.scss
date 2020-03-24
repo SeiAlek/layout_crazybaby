@@ -1,0 +1,36 @@
+@import "utils";
+
+.lang {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 3px;
+
+  &__item {
+    &:not(:last-child) {
+      &::after {
+        content: "/";
+
+        @media screen and (max-width: $maxMobileWidth) {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include hover(color, $turquoise);
+    color: $greyDark;
+    text-decoration: none;
+    outline: none;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      font-size: 18px;
+      color: $white;
+    }
+
+    &:focus {
+      color: $turquoise;
+      text-decoration: underline;
+    }
+  }
+}

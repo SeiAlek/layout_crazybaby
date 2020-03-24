@@ -1,0 +1,54 @@
+@import "utils";
+
+.thanks {
+  padding: 225px 40px;
+  text-align: center;
+
+  @media screen and (max-width: $maxMobileWidth) {
+    padding: 90px 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(13, 178, 179, 0.3);
+    mask-image: url(../images/thanks-fon.svg);
+    mask-position: top center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    animation: rotate 1s 1;
+    z-index: 2;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+    color: $turquoise;
+  }
+
+  &__bold {
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

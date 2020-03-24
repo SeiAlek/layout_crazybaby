@@ -1,0 +1,32 @@
+@import "utils";
+
+.menu {
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px 30px;
+
+    @media screen and (max-width:$maxMobileWidth) {
+      grid-auto-flow: row;
+    }
+  }
+
+  &__link {
+    @include hover(color, $turquoise);
+    color: $greyDark;
+    text-decoration: none;
+    outline: none;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      font-size: 18px;
+      text-decoration: none;
+      color: $white;
+    }
+
+    &:focus {
+      color: $turquoise;
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "utils";
+
+.design {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 30px 30px;
+  padding-bottom: 150px;
+
+  @media screen and (max-width: $maxTabletWidth) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+    padding: 0 $identTablet 130px 0;
+  }
+
+  @media screen and (max-width: $maxMobileWidth) {
+    grid-template-columns: 1fr;
+    padding: 0 $identMobile 90px;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__header {
+    position: relative;
+    width: max-content;
+    max-width: 480px;
+    transform: translateX(-100px);
+    z-index: 50;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      margin-bottom: 30px;
+      transform: none;
+      width: auto;
+    }
+  }
+
+  &__img-wrapper {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    overflow: hidden;
+
+    @media screen and (max-width: $maxMobileWidth) {
+      grid-row: auto;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s;
+  }
+
+  &__more-link {
+    @include moreLink(40%);
+    padding-top: 30px;
+  }
+}
