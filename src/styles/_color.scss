@@ -26,15 +26,15 @@
       border-radius: 50%;
     }
 
-    &--grey::after {
+    &--silver::after {
       background-color: #d4d4d4;
     }
 
-    &--light-grey::after {
+    &--grey::after {
       background-color: #a4a4a4;
     }
 
-    &--brown::after {
+    &--gold::after {
       background-color: #a1847d;
     }
 
@@ -52,6 +52,17 @@
 
     &:checked + .color__block {
       border-color: $granit;
+    }
+
+    &:disabled + .color__block {
+      opacity: 0.5;
+
+      &::after {
+        content: "x";
+        text-align: center;
+        line-height: ($collorBlockSize - 3px);
+        color: $white;
+      }
     }
 
     &:focus + .color__block {
