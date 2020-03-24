@@ -115,16 +115,15 @@
   &__field-number {
     width: 80px;
     text-align: center;
+    -moz-appearance: textfield;
 
     &::-webkit-inner-spin-button,
     &::-webkit-inner-spin-button {
-      -moz-appearance: textfield;
       -webkit-appearance: none;
-      appearance: none;
     }
 
     &:focus {
-      padding: 10px 0;
+      padding: 10px 0 8px;
     }
 
     &--tight {
