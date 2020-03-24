@@ -12,10 +12,6 @@
     border-color: $granit;
     transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 
-    @media screen and (max-width: $maxMobileWidth) {
-      width: 100%;
-    }
-
     &:hover,
     &:focus {
       background-color: $turquoise;
@@ -55,6 +51,10 @@
       border-color: $lagoonInactive;
       cursor: default;
     }
+
+    @media screen and (max-width: $maxMobileWidth) {
+      width: 100%;
+    }
   }
 
   &__secondary {
@@ -65,10 +65,6 @@
     background-color: $white;
     border-color: $white;
     transition: color 0.3s, background-color 0.3s, border-color 0.3s;
-
-    @media screen and (max-width: $maxMobileWidth) {
-      width: 100%;
-    }
 
     &:hover,
     &:focus {
@@ -102,6 +98,10 @@
         border-color: $black;
       }
     }
+
+    @media screen and (max-width: $maxMobileWidth) {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -123,6 +123,10 @@
     }
 
     &:hover &--line::after {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $maxMobileWidth) {
       width: 100%;
     }
   }
