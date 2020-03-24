@@ -70,11 +70,10 @@
   line-height: 150%;
 }
 
-@mixin moreLink {
+@mixin moreLink($_underline) {
   display: inline-block;
   font-size: 12px;
   line-height: 125%;
-  padding-top: 30px;
   text-transform: uppercase;
   text-decoration: none;
   color: $turquoise;
@@ -84,7 +83,7 @@
     content: "";
     display: block;
     height: 1px;
-    width: 40%;
+    width: $_underline;
     margin-top: 6px;
     background-color: $turquoise;
     transition: width 0.3s;

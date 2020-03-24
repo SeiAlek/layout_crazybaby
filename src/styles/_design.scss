@@ -56,6 +56,7 @@
   }
 
   &__more-link {
-    @include moreLink;
+    @include moreLink(40%);
+    padding-top: 30px;
   }
 }
