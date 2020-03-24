@@ -50,41 +50,41 @@
 
         <form action="./shipping.html" method="GET" id="product-add-form" class="cart__order order">
           <img src="./images/products/luna-eye.png" alt="LUNA EYE" class="order__image">
-          <div class="order__product product">
+          <div class="order__product product" id="product">
             <h1 class="product__header">LUNA EYE</h1>
             <div class="product__price">$129.00</div>
             <div class="product__color color">
               <ul class="color__list">
                 <li class="color__item">
-                  <input class="color__radio" type="radio" name="color" id="color-light-grey">
+                  <input class="color__radio" type="radio" name="color" id="color-silver" checked>
                   <label
-                    for="color-light-grey"
-                    class="color__block color__block--light-grey"
+                    for="color-silver"
+                    class="color__block color__block--silver"
                   ></label>
                 </li>
                 <li class="color__item">
-                  <input class="color__radio" type="radio" name="color" id="color-grey">
+                  <input class="color__radio" type="radio" name="color" id="color-grey" disabled>
                   <label
                     for="color-grey"
                     class="color__block color__block--grey"
                   ></label>
                 </li>
                 <li class="color__item">
-                  <input class="color__radio" type="radio" name="color" id="color-brown">
+                  <input class="color__radio" type="radio" name="color" id="color-gold">
                   <label
-                    for="color-brown"
-                    class="color__block color__block--brown"
+                    for="color-gold"
+                    class="color__block color__block--gold"
                   ></label>
                 </li>
                 <li class="color__item">
-                  <input class="color__radio" type="radio" name="color" id="color-beige">
+                  <input class="color__radio" type="radio" name="color" id="color-beige" disabled>
                   <label
                     for="color-beige"
                     class="color__block color__block--beige"
                   ></label>
                 </li>
                 <li class="color__item">
-                  <input class="color__radio" type="radio" name="color" id="color-dark-grey">
+                  <input class="color__radio" type="radio" name="color" id="color-dark-grey" disabled>
                   <label
                     for="color-dark-grey"
                     class="color__block color__block--dark-grey"
@@ -93,17 +93,16 @@
               </ul>
               <h6 class="color__name">Silver</h6>
             </div>
-            <div class="product__quantity quantity" id="product__qty">
-              <button type="button" class="quantity__button quantity__button--minus" id="product__qty-minus">-</button>
+            <div class="product__quantity quantity">
+              <button type="button" class="quantity__button quantity__button--minus">-</button>
               <input
                 type="number"
-                class="form form__field form__field-number form__field--bordered"
-                id="qty-field"
+                class="form form__field form__field-number form__field-qty form__field--bordered"
                 required
                 value="1"
                 min="1"
               >
-              <button type="button" class="quantity__button quantity__button--plus" id="product__qty-plus">+</button>
+              <button type="button" class="quantity__button quantity__button--plus">+</button>
             </div>
             <a class="product__add-button button button__secondary button__secondary--black" id="add-to-cart">
               add TO CARD
@@ -124,10 +123,9 @@
               </div>
             </div>
             <button class="order__button-continue button button__primary" type="submit">Continue</button>
-            <!-- <a href="./shipping.html" class="order__button-continue button button__primary">Continue</a> -->
           </div>
 
-          <ul class="order__product-list product-list">
+          <ul class="order__product-list product-list" id="product-list">
             <li class="product-list__item">
               <img
                 src="./images/products/luna-eye__gold--prev.png"
@@ -140,19 +138,18 @@
                   Gold
                 </span>
               </div>
-              <div class="product-list__item-quantity quantity">
+              <div class="product-list__quantity quantity">
                 <button type="button" class="quantity__button quantity__button--minus">-</button>
                 <input
                   type="number"
-                  class="form form__field form__field-number form__field--bordered form__field-number--tight"
-                  id="product-001__qty-field"
+                  class="form form__field form__field-number form__field-qty form__field--bordered"
                   required
                   value="1"
                   min="1"
                 >
                 <button type="button" class="quantity__button quantity__button--plus">+</button>
               </div>
-              <button type="button" class="product-list__item-delete"></button>
+              <div type="button" class="product-list__item-delete"></div>
             </li>
 
             <li class="product-list__item">
@@ -167,19 +164,18 @@
                   Silver
                 </span>
               </div>
-              <div class="product-list__item-quantity quantity">
+              <div class="product-list__quantity quantity">
                 <button type="button" class="quantity__button quantity__button--minus">-</button>
                 <input
                   type="number"
-                  class="form form__field form__field-number form__field--bordered form__field-number--tight"
-                  id="product-002__qty-field"
+                  class="form form__field form__field-number form__field-qty form__field--bordered"
                   required
                   value="1"
                   min="1"
                 >
                 <button type="button" class="quantity__button quantity__button--plus">+</button>
               </div>
-              <button type="button" class="product-list__item-delete"></button>
+              <div type="button" class="product-list__item-delete"></div>
             </li>
           </ul>
         </form>
@@ -187,26 +183,26 @@
 
       <footer class="footer">
         <div class="footer__section">
-          <a href="/" class="footer__logo logo">
+          <a href="index.html" class="footer__logo logo">
             <img src="./images/logo.svg" alt="CrazyBaby" class="logo__img">
           </a>
         </div>
         <ul class="footer__section footer__icons icons">
           <li class="icons__item">
-            <a href="#" class="icons__link icons__facebook"></a>
+            <a href="./#" class="icons__link icons__facebook"></a>
           </li>
           <li class="icons__item">
-            <a href="#" class="icons__link icons__twitter"></a>
+            <a href="./#" class="icons__link icons__twitter"></a>
           </li>
           <li class="icons__item">
-            <a href="#" class="icons__link icons__instagram"></a>
+            <a href="./#" class="icons__link icons__instagram"></a>
           </li>
         </ul>
         <p class="footer__section">
           © 2019 All rights reserved.
-          <a href="#" class="footer__link">Terms of Use</a>
+          <a href="./#" class="footer__link">Terms of Use</a>
           &
-          <a href="#" class="footer__link">Privacy Policy</a>
+          <a href="./#" class="footer__link">Privacy Policy</a>
         </p>
       </footer>
     </div>
